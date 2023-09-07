@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sun{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: gold;
+    box-shadow: 0 0 25px goldenrod;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: orbit 25s linear infinite;
+    
+}
+.earth{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgb(14, 104, 134);
+    box-shadow: 0 0 10px blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 300px; 
+    animation: orbit 5s linear infinite;
+}
+.earth-trail{
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    background-color: transparent;
+    border-style: solid;
+    border-color:white transparent transparent transparent ;
+    border-width: .12rem 0.1rem 0 0 ;
+    rotate: 50deg;
+}
+.moon{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(189, 186, 186, 1);
+    box-shadow: 0 0 5px white;
+    top: 25px;
+    left: 100px;
+}
+.moon-trail{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: transparent;
+    border-style: solid;
+    border-color:white transparent transparent transparent ;
+    border-width: .12rem 0.1rem 0 0 ;
+    rotate: 50deg;
+}
+@keyframes orbit{
+    to{
+        transform: rotate(360deg);
+    }
+}
+.ufo img{
+    position: absolute;
+    width: 200px; 
+    rotate: -30deg;
+    top:150px ;
+    left: -200px;
+    animation: ufo-travel 2s linear 4s 2;
+}
+
+@keyframes ufo-travel{
+    from{
+        top:150px ;
+        left: -200px;
+        
+    }
+    to{
+        top: -150px;
+        left: 250px;
+        
+    }
+}
